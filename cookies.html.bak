@@ -3,9 +3,6 @@
 <script>
 	function cookiesGet() {
 		let cookie = decodeURIComponent(document.cookie);
-		if(cookie = "") {
-			return "";
-		}
 		return cookie;
 	}
 	function setCookie(name) {
@@ -13,7 +10,7 @@
 	}
 	function checkCookie() {
 		let cooki = cookiesGet();
-		if(cooki != "") {
+		if(cooki != "" && cooki != null) {
 			alert("Word is " + cooki);
 		}
 		else {
@@ -28,7 +25,7 @@
 </head>
 
 
-<body onload="checkCookies()"></body>
+<body onload="checkCookie()"></body>
 
 <footer>
 	&copy; Kevin Woodard 2022
